@@ -9,17 +9,17 @@ const arbitraryArrayOperations = jsc.bless({
       case 0: return {
         op: 'push',
         val: jsc.random(0, 100)
-      };
+      }
       case 1: return {
         op: 'pop',
-      };
+      }
       case 2: return {
         op: 'shift'
-      };
+      }
       case 3: return {
         op: 'unshift',
         val: jsc.random(0, 100)
-      };
+      }
     }
   })
 })
@@ -28,17 +28,17 @@ describe('DoublyLinkedList jsverify', () => {
    jsc.property('has correct length', jsc.array(jsc.int32), arr => {
      const list = new DoublyLinkedList(arr)
      return lodash.isEqual(list.length, arr.length)
-   });
+   })
 
    jsc.property('converts to array', jsc.array(jsc.int32), arr => {
      const list = new DoublyLinkedList(arr)
      return lodash.isEqual(list.toArray(), arr)
-   });
+   })
 
   jsc.property('check for includes', jsc.array(jsc.int8), jsc.array(jsc.int8), (arr, elemToCheck) => {
     const list = new DoublyLinkedList(arr)
     return list.includes(elemToCheck) === arr.includes(elemToCheck)
-  });
+  })
 
   jsc.property('supports arbitrary sequences of array mutation operations',
     jsc.array(jsc.int8), jsc.array(arbitraryArrayOperations), (arr, operations) => {
@@ -54,7 +54,7 @@ describe('DoublyLinkedList jsverify', () => {
       }
     }
     return true
-  });
+  })
 
   jsc.property('executes map function like an Array', jsc.array(jsc.uint32), (arr) => {
     const mappingFunction = x => x + 32

@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/danoctavian/algo-challenge-doubly-linked-list/issues"
   },
-  "homepage": "https://github.com/danoctavian/algo-challenge-doubly-linked-list#readme"
+  "homepage": "https://github.com/danoctavian/algo-challenge-doubly-linked-list#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "jsverify": "^0.8.4",
+    "lodash": "^4.17.15"
+  }
 }

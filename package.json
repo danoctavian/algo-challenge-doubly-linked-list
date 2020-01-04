@@ -1,0 +1,22 @@
+{
+  "name": "algo-challenge-doubly-linked-list",
+  "version": "1.0.0",
+  "description": "a Javascript Doubly Linked List you can copy paste into your algorithm code challenges.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danoctavian/algo-challenge-doubly-linked-list.git"
+  },
+  "keywords": [
+    "linked-list"
+  ],
+  "author": "danoctavian91@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danoctavian/algo-challenge-doubly-linked-list/issues"
+  },
+  "homepage": "https://github.com/danoctavian/algo-challenge-doubly-linked-list#readme"
+}

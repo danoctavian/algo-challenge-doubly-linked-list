@@ -4,7 +4,7 @@
   "description": "a Javascript Doubly Linked List you can copy paste into your algorithm code challenges.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",

@@ -117,13 +117,14 @@ class DoublyLinkedList {
       const follower = current.prev
       current.next = current.prev
       current.prev = prev
-      current = follower
       prev = current
+      current = follower
     }
     this.head.next = null
     this.head.prev = prev
 
     // swap head and tail
+    this.tail.prev = null
     const temp = this.tail
     this.tail = this.head
     this.head = temp

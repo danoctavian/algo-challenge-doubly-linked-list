@@ -104,6 +104,22 @@ describe('DoublyLinkedList jsverify', () => {
     })
     return lodash.isEqual(forEachedFromArray, forEachedFromList)
   })
+
+  jsc.property('executes reverse function like an Array', jsc.array(jsc.uint32), (arr) => {
+    const arrCloneReversed = lodash.cloneDeep(arr)
+    arrCloneReversed.reverse()
+    const list = new DoublyLinkedList(arr)
+    list.reverse()
+    return lodash.isEqual(arrCloneReversed, list.toArray())
+  })
+
+  jsc.property('reversing the list twice results into the original list', jsc.array(jsc.uint32), (arr) => {
+    const arrClone = lodash.cloneDeep(arr)
+    const list = new DoublyLinkedList(arr)
+    list.reverse()
+    list.reverse()
+    return lodash.isEqual(arrClone, list.toArray())
+  })
 })
 
 describe('DoublyLinkedList', () => {

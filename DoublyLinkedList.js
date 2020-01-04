@@ -47,6 +47,7 @@ class DoublyLinkedList {
       return val
     } else {
       const newTail = this.tail.prev
+      newTail.next = null
       const val = this.tail.val
       this.tail = newTail
       this.length--
@@ -88,6 +89,7 @@ class DoublyLinkedList {
       return val
     } else {
       const newHead = this.head.next
+      newHead.prev = null
       const val = this.head.val
       this.head = newHead
       this.length--

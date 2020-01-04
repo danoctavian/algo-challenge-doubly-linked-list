@@ -49,7 +49,7 @@ describe('DoublyLinkedList jsverify', () => {
       const operation = operations[i]
       const r1 = list[operation.op](operation.val)
       const r2 = arr[operation.op](operation.val)
-      if (!lodash.isEqual(r1, r2)) {
+      if (!lodash.isEqual(r1, r2) || !lodash.isEqual(list.toArray(), arr)) {
         return false
       }
     }

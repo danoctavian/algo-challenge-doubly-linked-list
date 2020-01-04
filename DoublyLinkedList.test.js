@@ -35,7 +35,7 @@ describe('DoublyLinkedList jsverify', () => {
      return lodash.isEqual(list.toArray(), arr)
    })
 
-  jsc.property('check for includes', jsc.array(jsc.int8), jsc.array(jsc.int8), (arr, elemToCheck) => {
+  jsc.property('check for includes', jsc.array(jsc.int8), jsc.int8, (arr, elemToCheck) => {
     const list = new DoublyLinkedList(arr)
     return list.includes(elemToCheck) === arr.includes(elemToCheck)
   })

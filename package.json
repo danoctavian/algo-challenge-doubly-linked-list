@@ -23,6 +23,6 @@
   "devDependencies": {
     "jest": "^24.9.0",
     "jsverify": "^0.8.4",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.19"
   }
 }
